@@ -1,0 +1,35 @@
+<div class="w-full h-full flex flex-row">
+  <!-- <hr class="absolute w-100 h-2 top-1/2 bg-green-600" /> -->
+  <div
+    class="flex flex-row justify-center"
+    *ngFor="let machine of machines; last as last"
+  >
+    <div
+      class="w-32 h-32 flex flex-col items-center align-middle p-5 relative shadow-md"
+      [ngClass]="{
+        'bg-red-500': machine.machineState === machineState.ALARM,
+        'bg-gray-300 text-black': machine.machineState === machineState.RUNNING,
+        'bg-orange-400': machine.machineState === machineState.WARNING,
+        'text-white': machine.type === 'Attacher' || 'Closer'
+      }"
+    >
+      <div class="absolute top-0 right-0 pt-px pr-px">
+        <span
+          class="material-icons text-right"
+          [ngClass]="
+            machine.machineState == 'running' ? 'text-green-500' : 'text-white'
+          "
+        >
+          {{ getStateIcon(machine.machineState) }}
+        </span>
+      </div>
+      <span class="material-icons text-5xl">{{
+        getMachineIcon(machine.type)
+      }}</span>
+      <p class="m-auto text-md">{{ machine.name }}</p>
+    </div>
+    <div class="flex flex-row items-center justify-center">
+      <span class="border-b-4 w-10 border-green-600" *ngIf="!last"></span>
+    </div>
+  </div>
+</div>

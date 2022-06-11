@@ -1,19 +1,28 @@
 {
-  "posts": [
+  "machines": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "type": "Scale",
+      "name": "Scale",
+      "machineState": "running"
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "id": 2,
+      "type": "Attacher",
+      "name": "Attacher",
+      "machineState": "alarm"
+    },
+    {
+      "id": 3,
+      "type": "Packer",
+      "name": "Packer",
+      "machineState": "running"
+    },
+    {
+      "id": 4,
+      "type": "Closer",
+      "name": "Closer",
+      "machineState": "warning"
     }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }

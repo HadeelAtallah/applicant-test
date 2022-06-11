@@ -2,8 +2,11 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  template: ` <div></div>`,
-  styleUrls: ['./app.component.scss'],
+  template: `
+    <app-header></app-header>
+    <!-- <div class=" flex flex-col"> -->
+    <app-machine-overview></app-machine-overview>
+  `,
 })
 export class AppComponent {
   title = 'applicant-test';
