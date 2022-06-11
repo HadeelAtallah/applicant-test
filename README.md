@@ -3,7 +3,9 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.10.
 
 Used Libraries
+
 [Json-server](https://yarnpkg.com/package/json-server) v0.17.0
+TailwindCSS v3.1.2
 
 ## Development server
 
