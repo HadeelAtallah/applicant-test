@@ -7,7 +7,7 @@ Used Libraries
 
 ## Development server
 
-To install dependencies, run `yarn install`
+To install dependencies, run `yarn install`. If you don't have yarn installed run `npm install --global yarn`
 
 ## Development server
 
